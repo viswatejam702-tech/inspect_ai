@@ -15,6 +15,13 @@ from ._bridge.context import (
 )
 from ._bridge.sandbox.bridge import sandbox_agent_bridge
 from ._bridge.sandbox.types import SandboxAgentBridge
+from ._bridge.session import AgentBridgeSession, agent_bridge_session
+from ._bridge.transport import (
+    AgentBridgeTransport,
+    AsyncMemoryTransport,
+    HttpResponse,
+    HttpTransportAdapter,
+)
 from ._bridge.types import AgentBridge
 from ._channel import (
     AgentChannel,
@@ -46,6 +53,12 @@ __all__ = [
     "sandbox_agent_bridge",
     "AgentBridge",
     "SandboxAgentBridge",
+    "agent_bridge_session",
+    "AgentBridgeSession",
+    "AgentBridgeTransport",
+    "AsyncMemoryTransport",
+    "HttpTransportAdapter",
+    "HttpResponse",
     "BridgedToolsSpec",
     # Agent bridge context (ambient identity of the calling agent)
     "AgentBridgeContext",
